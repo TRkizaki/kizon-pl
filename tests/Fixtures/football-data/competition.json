@@ -1,0 +1,9 @@
+{
+    "code": "PL",
+    "name": "Premier League",
+    "currentSeason": {
+        "startDate": "2026-08-21",
+        "endDate": "2027-05-30",
+        "currentMatchday": 6
+    }
+}
