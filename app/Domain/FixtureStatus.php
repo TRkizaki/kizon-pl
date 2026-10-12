@@ -32,4 +32,12 @@ enum FixtureStatus: string
     {
         return $this === self::InPlay || $this === self::Paused;
     }
+
+    /**
+     * Whether the match is postponed, suspended or cancelled.
+     */
+    public function isCalledOff(): bool
+    {
+        return in_array($this, [self::Postponed, self::Suspended, self::Cancelled], true);
+    }
 }
