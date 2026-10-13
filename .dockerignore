@@ -1,0 +1,19 @@
+# Secrets never enter an image: the runtime environment supplies them.
+.env
+.env.*
+!.env.example
+
+# Rebuilt inside the image.
+vendor
+node_modules
+bootstrap/cache/*.php
+
+# Local state and tooling.
+.git
+.phpunit.cache
+storage/logs/*
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*
+.idea
+.vscode

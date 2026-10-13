@@ -1,0 +1,13 @@
+# The production image, run locally: `make up`, then http://localhost:8080
+services:
+  app:
+    build:
+      context: .
+      target: app
+    image: kizon-pl:dev
+    ports:
+      - "8080:8080"
+    env_file: .env
+    environment:
+      SERVER_NAME: ":8080" # plain HTTP locally; the real domain (with automatic HTTPS) in production
+      LOG_CHANNEL: stderr # logs go to `docker compose logs`, not a file inside the container
